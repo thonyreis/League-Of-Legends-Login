@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  --branco: #fff;
+  --brancoAcinzentado: #f9f9f9;
+  --cinzaClaro: #ececec;
+  --cinza: #c4c4c4;
+  --cinzaMedio: #a7a7a7;
+  --cinzaEscuro: #343434;
+  --preto: #000000;
+  --azul: #1b77f3;
+  --vermelho: #cf3c3f;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  padding: clamp(35px, 8%, 70px);
+}
+
+.loginLogo {
+  width: 130px;
+  margin-bottom: 80px;
+}
+
+.loginTitulo {
+  color: var(--cinzaEscuro);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.loginRotulo {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background-color: var(--cinzaClaro);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9em;
+  padding: 25px 10px 10px;
+  font-weight: 600;
+  color: var(--cinzaEscuro);
+}
+
+.loginRotulo span {
+  position: absolute;
+  font-size: 0.8em;
+  font-size: 700;
+  text-transform: uppercase;
+  color: var(--cinzaMedio);
+  margin: 20px;
+  cursor: text;
+  transition: all 200ms ease;
+}
+
+.input:focus {
+  background-color: var(--brancoAcinzentado);
+  border: 2px solid var(--cinzaEscuro);
+}
+
+.loginRotulo .spanAtivo {
+  font-size: o.7em;
+  margin: 8px 10px;
+}
