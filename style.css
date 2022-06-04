@@ -19,14 +19,27 @@
   --vermelho: #cf3c3f;
 }
 
+main{
+  display: flex;
+}
+
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 500px;
   min-height: 100vh;
   padding: clamp(35px, 8%, 70px);
+}
+
+.involucro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .loginLogo {
@@ -112,5 +125,83 @@
 
 .loginIcones .iconesBotao:nth-child(3) {
   background-color: var(--preto);
+}
+
+.loginRotulo--checkbox {
+  width: 100%;
+  margin: 15px 0;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.input--checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--cinzaClaro);
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.input--checkbox:checked {
+  background-color: var(--vermelho);
+}
+
+.input--checkbox:checked::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: 3px solid var(--branco);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin: 2px 6px;
+}
+
+.loginBotao {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vermelho);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.loginBotao svg {
+  fill: var(--branco);
+}
+
+.loginBotao:disabled {
+  cursor:auto;
+  background-color: white;
+  border: 2px solid var(--cinzaClaro);
+}
+
+.loginBotao:disabled svg {
+  fill: var(--cinzaMedio);
+}
+
+.loginLink {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--cinzaMedio);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.papelDeParede {
+  width: 100%;
+  background-image: url('./images/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1;
 }
 
